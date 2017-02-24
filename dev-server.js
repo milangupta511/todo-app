@@ -1,9 +1,12 @@
 var webpack = require('webpack');
 var WebpackDevServer = require('webpack-dev-server');
 var config = require('./webpack.config');
-
+/*
+  About webpack-dev-server
+  its a node js Express server, uses webpack-dev-middleware to serve a webpack bundle
+ */
 new WebpackDevServer(webpack(config), {
-    publicPath: config.output.publicPath,
+    publicPath: config.output.publicPath, //here: '/'
     hot: true,
     historyApiFallback: true,
     // It suppress error shown in console, so it has to be set to false.
@@ -23,7 +26,7 @@ new WebpackDevServer(webpack(config), {
     }
 }).listen(3000, 'localhost', function (err) {
     if (err) {
-        console.log(err);
+      console.log(err);
     }
 
   console.log('webpack dev server listening at localhost:3000');

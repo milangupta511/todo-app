@@ -4,7 +4,7 @@
  * Module dependencies.
  */
 
-const app = require('../api/index');
+const app = require('../api/index'); // includes routes and mongoDB connection
 const debug = require('debug')('todo-api:server');
 const http = require('http');
 
