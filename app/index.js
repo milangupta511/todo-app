@@ -9,7 +9,7 @@ import { getTodos } from './api';
 import './styles/main.scss';
 
 getTodos().then((todos) => {
-    const store = configureStore({ todos });
+    const store = configureStore({ todos }); // initial state, only todos part is initially loaded
     const history = syncHistoryWithStore(browserHistory, store);
 
     render(
